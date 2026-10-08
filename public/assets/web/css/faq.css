@@ -1,0 +1,119 @@
+.faq-hero {
+  --hero-bg: url('/assets/web/images/about-welcome-image.webp');
+  min-height: 42vh;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(184,150,46,0.15);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid rgba(184,150,46,0.15);
+}
+
+.faq-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  cursor: pointer;
+  text-align: left;
+  background: transparent;
+  border: none;
+  gap: 16px;
+}
+
+.faq-btn:hover .faq-q {
+  color: #B8962E;
+}
+
+.faq-q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #111010;
+  transition: color 0.25s;
+  line-height: 1.4;
+}
+
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(184,150,46,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.faq-icon i {
+  font-size: 0.6rem;
+  color: #B8962E;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+  background: #B8962E;
+  border-color: #B8962E;
+}
+
+.faq-item.open .faq-icon i {
+  color: #fff;
+  transform: rotate(45deg);
+}
+
+.faq-item.open .faq-q {
+  color: #B8962E;
+}
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-body-inner {
+  padding: 0 0 20px 0;
+  color: rgba(17,16,16,0.6);
+  font-size: 0.9375rem;
+  line-height: 1.9;
+}
+
+.cat-btn {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  color: rgba(17,16,16,0.4);
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+}
+
+.cat-btn:hover {
+  color: #B8962E;
+}
+
+.cat-btn.active {
+  color: #B8962E;
+  border-bottom-color: #B8962E;
+}
+
+.faq-group-title {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(184,150,46,0.6);
+  margin: 0.5rem 0 1rem;
+}
+
+.faq-call-btn {
+  color: #D4AE50;
+  border-color: #D4AE50;
+}

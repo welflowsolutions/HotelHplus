@@ -1,0 +1,35 @@
+.hero-section {
+  background: linear-gradient(160deg, rgba(17,16,16,0.92) 0%, rgba(17,16,16,0.65) 55%, rgba(17,16,16,0.4) 100%),
+    url('/assets/web/images/homepage-hero-bg.webp') center/cover no-repeat fixed;
+  min-height: 100svh;
+}
+
+.scroll-indicator { animation: bounce 2s infinite; }
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+.hero-book-control {
+  min-height: 44px;
+}
+
+@media (max-width: 1023px) {
+  .hero-section {
+    background-attachment: scroll;
+  }
+
+  .home-parallax-bg {
+    background-attachment: scroll !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    background:
+      linear-gradient(180deg, rgba(17,16,16,0.88) 0%, rgba(17,16,16,0.78) 42%, rgba(17,16,16,0.62) 100%),
+      url('/assets/web/images/homepage-hero-bg-mobile.webp') center bottom / cover no-repeat !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+}

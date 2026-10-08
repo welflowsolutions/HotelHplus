@@ -1,0 +1,141 @@
+.gallery-hero {
+  --hero-bg: url('/assets/web/images/new/DSC_6608.webp');
+}
+
+.gallery-columns {
+  column-gap: 12px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.gallery-item .gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17,16,16,0.55);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-item img {
+  transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
+  display: block;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.filter-btn {
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s, border-color 0.25s;
+  color: rgba(17,16,16,0.4);
+}
+
+.filter-btn:hover {
+  color: #B8962E;
+}
+
+.filter-btn.active {
+  color: #B8962E;
+  border-bottom-color: #B8962E;
+}
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(17,16,16,0.95);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox.open {
+  display: flex;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+body.lightbox-open #header,
+body.lightbox-open .whatsapp-btn,
+body.lightbox-open #scroll-top {
+  z-index: 0 !important;
+}
+
+#lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+#lb-close,
+#lb-prev,
+#lb-next {
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(184,150,46,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+#lb-close:hover,
+#lb-prev:hover,
+#lb-next:hover {
+  background: rgba(184,150,46,0.2);
+}
+
+#lb-close {
+  top: 24px;
+  right: 24px;
+  z-index: 10001;
+}
+
+#lb-prev {
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10001;
+}
+
+#lb-next {
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10001;
+}
+
+#lb-caption {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.65);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  z-index: 10001;
+}

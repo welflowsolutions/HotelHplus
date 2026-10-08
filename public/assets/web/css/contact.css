@@ -1,0 +1,43 @@
+.contact-hero {
+  --hero-bg: url('/assets/web/images/about-welcome-image.webp');
+}
+
+.form-field {
+  width: 100%;
+  border: 1px solid rgba(184,150,46,0.2);
+  background: transparent;
+  padding: 14px 20px;
+  font-size: 0.875rem;
+  color: #111010;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  transition: border-color 0.25s;
+}
+
+.form-field::placeholder {
+  color: rgba(17,16,16,0.3);
+}
+
+.form-field:focus {
+  border-color: #B8962E;
+}
+
+select.form-field {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8962E' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.info-card {
+  background: #fff;
+  border: 1px solid rgba(184,150,46,0.15);
+  padding: 2rem;
+  transition: border-color 0.3s;
+  text-align: center;
+}
+
+.info-card:hover {
+  border-color: rgba(184,150,46,0.4);
+}

@@ -1,0 +1,9 @@
+.about-hero {
+  --hero-bg: url('/assets/web/images/about-main-image.webp');
+}
+
+.about-cta {
+  background-image:
+    linear-gradient(160deg, rgba(17,16,16,0.88) 0%, rgba(17,16,16,0.72) 50%, rgba(17,16,16,0.55) 100%),
+    url('/assets/web/images/about-welcome-image.webp');
+}

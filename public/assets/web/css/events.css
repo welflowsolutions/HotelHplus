@@ -1,0 +1,186 @@
+.events-hero {
+  min-height: 48vh;
+}
+
+.events-primary-frame {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
+}
+
+.events-secondary-frame {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%, 0 95%);
+}
+
+.events-story-frame {
+  clip-path: polygon(0 0, 100% 0, 100% 94%, 94% 100%, 0 100%);
+}
+
+.event-package-card {
+  position: relative;
+  padding-top: 18px;
+}
+
+.event-package-badge {
+  position: absolute;
+  top: 0;
+  left: 32px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 8px 16px;
+  background: #b8962e;
+  color: #fff;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: 0 14px 28px rgba(184, 150, 46, 0.18);
+}
+
+.event-package-shell {
+  height: 100%;
+  border: 1px solid rgba(184, 150, 46, 0.14);
+  background: #fff;
+  padding: 32px;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event-package-card:hover .event-package-shell {
+  border-color: rgba(184, 150, 46, 0.34);
+  transform: translateY(-2px);
+  box-shadow: 0 28px 52px rgba(17, 16, 16, 0.08);
+}
+
+.event-package-subtitle {
+  margin-bottom: 12px;
+  color: rgba(17, 16, 16, 0.46);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.event-package-card.is-featured .event-package-shell {
+  background: linear-gradient(180deg, rgba(245, 237, 214, 0.45) 0%, rgba(255, 255, 255, 0.98) 38%, #fff 100%);
+  border-color: rgba(184, 150, 46, 0.26);
+  box-shadow: 0 20px 44px rgba(184, 150, 46, 0.12);
+}
+
+.events-form-shell {
+  border: 1px solid rgba(184, 150, 46, 0.16);
+  background: #fff;
+  padding: 32px;
+  box-shadow: 0 18px 46px rgba(17, 16, 16, 0.06);
+}
+
+.events-form-shell .form-field {
+  width: 100%;
+  min-height: 58px;
+  border: 1px solid rgba(184, 150, 46, 0.18);
+  background: #fcfaf6;
+  padding: 16px 18px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #111010;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.events-form-shell .form-field::placeholder {
+  color: rgba(17, 16, 16, 0.36);
+  font-size: 1rem;
+}
+
+.events-form-shell .form-field:focus {
+  border-color: rgba(184, 150, 46, 0.72);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(184, 150, 46, 0.08);
+}
+
+.events-form-shell select.form-field {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  background-color: #fcfaf6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' viewBox='0 0 16 10'%3E%3Cpath d='M2 2.25 8 8l6-5.75' fill='none' stroke='%23111010' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 16px 10px;
+  padding-right: 52px;
+  cursor: pointer;
+}
+
+.events-form-shell input[type="date"].form-field {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  padding-right: 54px;
+}
+
+.events-form-shell input[type="date"].form-field::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.65;
+  cursor: pointer;
+}
+
+.events-form-shell textarea.form-field {
+  min-height: 168px;
+  padding-top: 18px;
+  line-height: 1.7;
+}
+
+.events-cta {
+  background-image:
+    linear-gradient(160deg, rgba(17, 16, 16, 0.9) 0%, rgba(17, 16, 16, 0.72) 54%, rgba(17, 16, 16, 0.48) 100%),
+    var(--events-cta-bg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (max-width: 991px) {
+  .events-form-shell {
+    padding: 24px;
+  }
+
+  .events-form-shell .form-field {
+    min-height: 54px;
+    padding: 15px 16px;
+  }
+
+  .event-package-badge {
+    left: 24px;
+  }
+
+  .event-package-shell {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .events-hero {
+    min-height: 42vh;
+  }
+
+  .events-cta {
+    background-attachment: scroll;
+  }
+
+  .event-package-badge {
+    position: static;
+    margin-bottom: 12px;
+    box-shadow: none;
+  }
+
+  .event-package-card {
+    padding-top: 0;
+  }
+
+  .events-form-shell textarea.form-field {
+    min-height: 150px;
+  }
+}

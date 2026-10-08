@@ -1,0 +1,60 @@
+.trident-hero {
+  --hero-bg: url('/assets/web/images/new/DSC_6616.webp');
+}
+
+.trident-cta {
+  background-image:
+    linear-gradient(160deg, rgba(17,16,16,0.88) 0%, rgba(17,16,16,0.72) 50%, rgba(17,16,16,0.55) 100%),
+    url('/assets/web/images/new/DSC_6617.webp');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.pkg-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(184,150,46,0.1);
+}
+
+.pkg-feature:last-child {
+  border-bottom: none;
+}
+
+.form-field {
+  width: 100%;
+  border: 1px solid rgba(184,150,46,0.2);
+  background: transparent;
+  padding: 12px 16px;
+  font-size: 0.875rem;
+  color: #111010;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.form-field::placeholder {
+  color: rgba(17,16,16,0.3);
+}
+
+.form-field:focus {
+  border-color: #B8962E;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8962E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.trident-textarea {
+  resize: none;
+}
+
+.trident-quote-dark {
+  color: rgba(184,150,46,0.15);
+}

@@ -1,0 +1,88 @@
+.thumb {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s, outline 0.2s;
+}
+
+.thumb:hover,
+.thumb.active {
+  opacity: 1;
+  outline: 2px solid #B8962E;
+}
+
+.sticky-bar {
+  position: sticky;
+  top: 80px;
+  z-index: 30;
+}
+
+.form-field {
+  width: 100%;
+  border: 1px solid rgba(184,150,46,0.22);
+  background: transparent;
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  color: #111010;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.form-field::placeholder {
+  color: rgba(17,16,16,0.3);
+}
+
+.form-field:focus {
+  border-color: #B8962E;
+}
+
+.stay-details-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8px;
+}
+
+.stay-guests-field,
+.stay-rooms-field {
+  grid-column: span 1;
+}
+
+.date-field {
+  min-height: 44px;
+  padding-left: 12px;
+  padding-right: 10px;
+  font-size: 0.875rem;
+}
+
+.date-field::-webkit-calendar-picker-indicator {
+  margin-left: 2px;
+}
+
+select.form-field {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8962E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  background-color: transparent;
+}
+
+.room-call-btn {
+  color: #D4AE50;
+  border-color: #D4AE50;
+}
+
+@media (max-width: 640px) {
+  .stay-details-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stay-guests-field,
+  .stay-rooms-field {
+    grid-column: auto;
+  }
+
+  .date-field {
+    font-size: 0.875rem;
+  }
+}
